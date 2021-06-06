@@ -6,6 +6,7 @@ html, body {
 }
 
 img {
+    width: 272px;
     max-width: 100%;
 }
 
@@ -43,22 +44,19 @@ input {
 }
 
 .item1 {
-    background: LightSkyBlue;
     grid-area: header;
   }
 
 .item3 {
-    background: PaleTurquoise;
     grid-area: content;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15%;
-    width: 50%;
+    width: 30%;
   }
 
 .item4 {
-    background: lightpink;
     grid-area: footer;
   }
 
@@ -66,7 +64,6 @@ input {
     font-size: 1.5em;
     min-height: 100%;
     width: 100%;
-    background: LightGray;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr;
