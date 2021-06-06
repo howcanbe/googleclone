@@ -1,16 +1,108 @@
-body {
+html, body {
     text-align: center;
+    height: 100%;
+    margin: 0px;
 
 }
 
-#searchbar {
+img {
+    width: 100%;
+}
+
+input {
+    border: solid 1px;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    height: 100%;
+    outline: none;
+    /* padding-inline-end: 44px;
+    padding-inline-start: 52px; */
+    position: relative;
+    width: 100%;
+    padding-left: 30px;
+    height: 25px;
+}
+.search {
+    position: relative;
+    width: 100%;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+/* #searchbar {
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.5);
     width: 300px;
     border: 2px solid black;
     border-radius: 8px;
     resize: none;
-}
+} */
 
-#search {
-    margin-top: 200px;
-}
+.item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+.item3 {
+    background: PaleTurquoise;
+    grid-area: content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 50%;
+  }
+
+.item4 {
+    background: lightpink;
+    grid-area: footer;
+  }
+
+.container {
+    font-size: 1.5em;
+    min-height: 100%;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr auto;
+    grid-gap: 0px;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+
+@media (min-width: 300px){
+    .container{
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+    }
+  }
+
+@media (min-width: 400px){
+    .container{
+      grid-template-areas:
+      /* Only change code below this line */
+        "header header"
+        "content content"
+        "footer footer";
+      /* Only change code above this line */
+    }
+  }
